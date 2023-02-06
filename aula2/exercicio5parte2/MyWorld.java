@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Inicialização do programa da bola que fica quicando.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vener Fruet daSilveira) 
+ * @version (2023-02-05)
  */
 public class MyWorld extends World
 {
