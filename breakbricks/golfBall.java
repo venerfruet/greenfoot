@@ -27,7 +27,7 @@ public class golfBall extends Actor
             dirX *= -1;
         }
         
-        if(posY-plus <=0 || posY+plus >=heightWorld){
+        if(posY-plus <= 30 || posY+plus >=heightWorld){
             dirY *= -1;
         }
         
