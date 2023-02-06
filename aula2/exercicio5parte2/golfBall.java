@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class golfBall here.
+ * Bola de golfe que fica quicando nas laterais da tela.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Vener Fruet daSilveira) 
+ * @version (2023-02-05)
  */
 public class golfBall extends Actor
 {
