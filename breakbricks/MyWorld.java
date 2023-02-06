@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 500, 1); 
         prepare();
     }
     
@@ -33,15 +33,15 @@ public class MyWorld extends World
         int score=0;
         int level=1;
         int lifes=3;
-        
+
         //define o placar
         showText("Pontuação: "+ score, 60, 10);
         showText("Nível: "+ level, 280, 10);
         showText("Vidas: "+ lifes, 540, 10);
-        
+
         //retorna a fase atual
         Actor[][] bricks=Fase1();
-        
+
         //adiciona 3 linhas de tijolos
         for(int row=0; row<bricks.length; row++){
             //adiciona 10 tijolos por linha
@@ -52,10 +52,16 @@ public class MyWorld extends World
             posX=widthBrick/2; //restaura posição X
             posY+=heightBrick; //define posição Y
         }
-        
+
         //adiciona a bola
-        golfBall golfBall = new golfBall();
-        addObject(golfBall,272,279);
+        GolfBall GolfBall = new GolfBall();
+        addObject(GolfBall,272,279);
+        Blocker blocker = new Blocker();
+        addObject(blocker,274,469);
+        blocker.setLocation(277,473);
+        blocker.setLocation(293,468);
+        GolfBall.setLocation(276,444);
+        GolfBall.setLocation(279,443);
     }
     
     private Actor[][] Fase1(){
