@@ -35,5 +35,15 @@ public class GolfBall extends Actor
         int newPosY=posY+dirY;
         
         setLocation(posX+dirX, posY+dirY);
+        detectBlocker();
+    }
+    
+    private void detectBlocker(){
+        if(isTouching(Blocker.class)){
+            dirY*=-1;
+            getWorld().showText("TOCOU", 300, 360);
+        }else{
+            getWorld().showText("...", 300, 360);
+        }
     }
 }

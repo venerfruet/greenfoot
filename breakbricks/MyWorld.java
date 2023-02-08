@@ -40,7 +40,7 @@ public class MyWorld extends World
         showText("Vidas: "+ lifes, 540, 10);
 
         //retorna a fase atual
-        Actor[][] bricks=Fase1();
+        Actor[][] bricks=Level00l();
 
         //adiciona 3 linhas de tijolos
         for(int row=0; row<bricks.length; row++){
@@ -64,41 +64,81 @@ public class MyWorld extends World
         GolfBall.setLocation(279,443);
     }
     
-    private Actor[][] Fase1(){
-        Actor[][] Bricks=new Actor[8][10];
+    private Actor[][] Level00l(){
+        Actor[][] bricks=new Actor[8][10];
         
         for(int i=0; i<10; i++){
-            Bricks[0][i]=new Brick001();
+            bricks[0][i]=new Brick001();
         }
         
         for(int i=0; i<10; i++){
-            Bricks[1][i]=new Brick002();
+            bricks[1][i]=new Brick002();
         }
         
         for(int i=0; i<10; i++){
-            Bricks[2][i]=new Brick005();
+            bricks[2][i]=new Brick005();
         }
 
         for(int i=0; i<10; i++){
-            Bricks[3][i]=new Brick004();
+            bricks[3][i]=new Brick004();
         }
         
         for(int i=0; i<10; i++){
-            Bricks[4][i]=new Brick006();
+            bricks[4][i]=new Brick006();
         }
         
         for(int i=0; i<10; i++){
-            Bricks[5][i]=new Brick007();
+            bricks[5][i]=new Brick007();
         }
 
         for(int i=0; i<10; i++){
-            Bricks[6][i]=new Brick008();
+            bricks[6][i]=new Brick008();
         }
 
         for(int i=0; i<10; i++){
-            Bricks[7][i]=new Brick003();
+            bricks[7][i]=new Brick003();
        }
        
-        return Bricks;        
+        return bricks;        
+    }
+    
+    private Actor[][] Leve002(){
+        Actor[][] bricks=new Actor[8][10];
+        
+        for(int row=0; row<bricks.length; row++){
+            
+            for(int column=0; column<bricks[0].length; column++){
+                
+                int item=Greenfoot.getRandomNumber(8);
+                switch(item){
+                    case 0:
+                        bricks[row][column]=new Brick001();
+                        break;
+                    case 1:
+                        bricks[row][column]=new Brick002();
+                        break;
+                    case 2:
+                        bricks[row][column]=new Brick003();
+                        break;
+                    case 3:
+                        bricks[row][column]=new Brick004();
+                        break;
+                    case 4:
+                        bricks[row][column]=new Brick005();
+                        break;
+                    case 5:
+                        bricks[row][column]=new Brick006();
+                        break;
+                    case 6:
+                        bricks[row][column]=new Brick007();
+                        break;
+                    case 7:
+                        bricks[row][column]=new Brick008();
+                        break;
+                }
+            }            
+        }
+        
+        return bricks;
     }
 }
